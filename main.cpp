@@ -29,7 +29,7 @@ protected:
    GLMmodel* robot;
    GLMmodel* bandit; //*** Para Textura: variable para objeto texturizado
    GLMmodel* soldier;
-   GLuint texid[2]; //*** Para Textura: variable que almacena el identificador de textura
+   GLuint texid; //*** Para Textura: variable que almacena el identificador de textura
 
 
 public:
