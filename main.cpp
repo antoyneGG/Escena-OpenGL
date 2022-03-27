@@ -32,6 +32,8 @@ protected:
    GLMmodel* soldier;
    GLMmodel* palma;
    GLuint texid[2]; //*** Para Textura: variable que almacena el identificador de textura
+   float yRotate = 0.0f;
+   bool keyE = false;
 
 
 public:
@@ -108,24 +110,29 @@ public:
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	
       //timer010 = 0.09; //for screenshot!
+
+		if (keyE) {
+			yRotate = yRotate + 1;
+		}
 		
       glPushMatrix();
-	  glTranslatef(0.0f, 0.0f, -5.0f);
-	  //glRotatef(timer010 * 360, 0.0, 1.0f, 0.0f);
+	  glTranslatef(0.0f, 0.0f, -20.0f);
+	  glRotatef(yRotate, 0.0, 1.0f, 0.0f);
 
       if (shader) shader->begin();
 		  
 		  glPushMatrix();
-		  glTranslatef(0.0f, 0.0f, 2.0f);
-		  //glScalef(-10.0f, -10.0f, -10.0f);
+		  glTranslatef(0.0f, 4.0f, 2.0f);
+		  glScalef(15.0f, 15.0f, 15.0f);
 		  glmDraw(escena, GLM_SMOOTH | GLM_MATERIAL);
 		  glPopMatrix();
 		
-
+		  /*
 		  glPushMatrix();
 		  glTranslatef(-1.5f, 0.0f, 0.0f);
 		  glmDraw(bunny, GLM_SMOOTH | GLM_MATERIAL);
 		  glPopMatrix();
+		  */
 
 		  glPushMatrix();
 		  glTranslatef(-3.5f, 0.0f, 0.0f);
@@ -138,12 +145,12 @@ public:
 		  glPopMatrix();
 
 		  glPushMatrix();
-		  glTranslatef(3.5f, 0.0f, 0.0f);
+		  glTranslatef(-1.5f, 0.0f, -7.0f);
 		  glmDraw(soldier, GLM_SMOOTH | GLM_MATERIAL);
 		  glPopMatrix();
 
 		  glPushMatrix();
-		  glTranslatef(3.5f, 0.0f, -2.0f);
+		  glTranslatef(1.5f, 0.0f, -7.0f);
 		  glmDraw(soldier, GLM_SMOOTH | GLM_MATERIAL);
 		  glPopMatrix();
 	      //glutSolidTeapot(1.0);
@@ -340,14 +347,19 @@ public:
 		{
 			this->Close(); // Close Window!
 		}
+		else if (cAscii == 'e') {
+			keyE = true;
+		}
 	};
 
 	virtual void OnKeyUp(int nKey, char cAscii)
 	{
-      if (cAscii == 's')      // s: Shader
-         shader->enable();
-      else if (cAscii == 'f') // f: Fixed Function
-         shader->disable();
+		if (cAscii == 's')      // s: Shader
+			shader->enable();
+		else if (cAscii == 'f') // f: Fixed Function
+			shader->disable();
+		else if (cAscii == 'e')
+			keyE = false;
 	}
 
    void UpdateTimer()
