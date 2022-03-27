@@ -1,61 +1,32 @@
-# Blender MTL File: 'Soldier.blend'
-# Material Count: 5
+# Blender MTL File: 'BasicBanditBlend.blend'
+# Material Count: 3
 
-newmtl None
-Ns 500
-Ka 0.8 0.8 0.8
-Kd 0.8 0.8 0.8
-Ks 0.8 0.8 0.8
-d 1
+newmtl BasicBandit_Body
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
 illum 2
 
-newmtl T1
-Ns 0.000000
-Ka 0.741497 0.741497 0.741497
-Kd 0.584314 0.584314 0.584314
-Ks 0.108844 0.108844 0.108844
+newmtl BasicBandit_Cloth
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
-Ni 1.450000
+Ni 1.000000
 d 1.000000
-illum 3
-map_Bump -bm 0.200000 -o 0.000000 -1.000000 0.000000 D:\\For Turbo Squid Sell\\Soldier\\source\\tex\\Tex_0013_7.PNG
-map_Kd -o 0.000000 -1.000000 0.000000 D:\\For Turbo Squid Sell\\Soldier\\textures\\Veriation\\Lower.png
-map_d -o 0.000000 -1.000000 0.000000 D:\\For Turbo Squid Sell\\Soldier\\source\\Tex_0013_1.PNG
+illum 2
 
-newmtl T2
-Ns 0.000000
-Ka 0.611087 0.611087 0.611087
-Kd 0.584314 0.584314 0.584314
-Ks 0.391156 0.391156 0.391156
+newmtl BasicBandit_EyeMAt
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
-Ni 1.450000
+Ni 1.000000
 d 1.000000
-illum 3
-map_Bump -bm 0.200000 -o 0.000000 -1.000000 0.000000 D:\\For Turbo Squid Sell\\Soldier\\source\\tex\\Tex_0011_7.PNG
-map_Kd -o 0.000000 -1.000000 0.000000 D:\\For Turbo Squid Sell\\Soldier\\textures\\Veriation\\Body.png
-map_d -o 0.000000 -1.000000 0.000000 D:\\For Turbo Squid Sell\\Soldier\\source\\Tex_0011_1.PNG
-
-newmtl T3
-Ns 0.000000
-Ka 0.265306 0.265306 0.265306
-Kd 0.584314 0.584314 0.584314
-Ks 0.452381 0.452381 0.452381
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 3
-map_Kd -o 0.000000 -1.000000 0.000000 D:\\For Turbo Squid Sell\\Soldier\\source\\Tex_0010_1.PNG
-map_d -o 0.000000 -1.000000 0.000000 D:\\For Turbo Squid Sell\\Soldier\\source\\Tex_0010_1.PNG
-
-newmtl T4
-Ns 0.000000
-Ka 0.367347 0.367347 0.367347
-Kd 0.584314 0.584314 0.584314
-Ks 0.234168 0.234168 0.234168
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 3
-map_Bump -bm 0.200000 -o 0.000000 -1.000000 0.000000 D:\\For Turbo Squid Sell\\Soldier\\textures\\Tex_0008_7.PNG
-map_Kd -o 0.000000 -1.000000 0.000000 D:\\For Turbo Squid Sell\\Soldier\\textures\\Veriation\\Head.png
-map_d -o 0.000000 -1.000000 0.000000 D:\\For Turbo Squid Sell\\Soldier\\textures\\Tex_0008_1.PNG
+illum 2

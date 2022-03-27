@@ -25,18 +25,20 @@ protected:
    clock_t time0,time1;
    float timer010;  // timer counting 0->1->0
    bool bUp;        // flag if counting up or down.
+   GLMmodel* escena;
    GLMmodel* bunny;
    GLMmodel* robot;
    GLMmodel* bandit; //*** Para Textura: variable para objeto texturizado
    GLMmodel* soldier;
-   GLuint texid; //*** Para Textura: variable que almacena el identificador de textura
+   GLMmodel* palma;
+   GLuint texid[2]; //*** Para Textura: variable que almacena el identificador de textura
 
 
 public:
 	myWindow(){}
 
 	//*** Para Textura: aqui adiciono un método que abre la textura en JPG
-	void initialize_textures(void)
+	void initialize_bandit_textures(void)
 	{
 		int w, h;
 		GLubyte* data = 0;
@@ -45,8 +47,8 @@ public:
 
 		//dib1 = loadImage("soccer_ball_diffuse.jpg"); //FreeImage
 
-		glGenTextures(1, &texid);
-		glBindTexture(GL_TEXTURE_2D, texid);
+		glGenTextures(1, &texid[0]);
+		glBindTexture(GL_TEXTURE_2D, texid[0]);
 		glTexEnvi(GL_TEXTURE_2D, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
@@ -55,6 +57,38 @@ public:
 		FIBITMAP* bitmap = FreeImage_Load(
 			FreeImage_GetFileType("./Mallas/BomerFree_BasicBandit_Cloth_AlbedoTransparency.png", 0),
 			"./Mallas/BomerFree_BasicBandit_Cloth_AlbedoTransparency.png");  //*** Para Textura: esta es la ruta en donde se encuentra la textura
+
+		FIBITMAP* pImage = FreeImage_ConvertTo32Bits(bitmap);
+		int nWidth = FreeImage_GetWidth(pImage);
+		int nHeight = FreeImage_GetHeight(pImage);
+
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, nWidth, nHeight,
+			0, GL_BGRA, GL_UNSIGNED_BYTE, (void*)FreeImage_GetBits(pImage));
+
+		FreeImage_Unload(pImage);
+		//
+		glEnable(GL_TEXTURE_2D);
+	}
+
+	void initialize_soldier_textures(void)
+	{
+		int w, h;
+		GLubyte* data = 0;
+		//data = glmReadPPM("soccer_ball_diffuse.ppm", &w, &h);
+		//std::cout << "Read soccer_ball_diffuse.ppm, width = " << w << ", height = " << h << std::endl;
+
+		//dib1 = loadImage("soccer_ball_diffuse.jpg"); //FreeImage
+
+		glGenTextures(1, &texid[1]);
+		glBindTexture(GL_TEXTURE_2D, texid[1]);
+		glTexEnvi(GL_TEXTURE_2D, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+
+		// Loading JPG file
+		FIBITMAP* bitmap = FreeImage_Load(
+			FreeImage_GetFileType("./Mallas/Type02/Tex_0013_1.png", 0),
+			"./Mallas/Type02/Tex_0013_1.png");  //*** Para Textura: esta es la ruta en donde se encuentra la textura
 
 		FIBITMAP* pImage = FreeImage_ConvertTo32Bits(bitmap);
 		int nWidth = FreeImage_GetWidth(pImage);
@@ -77,10 +111,17 @@ public:
 		
       glPushMatrix();
 	  glTranslatef(0.0f, 0.0f, -5.0f);
-	  glRotatef(timer010 * 360, 0.0, 1.0f, 0.0f);
+	  //glRotatef(timer010 * 360, 0.0, 1.0f, 0.0f);
 
       if (shader) shader->begin();
 		  
+		  glPushMatrix();
+		  glTranslatef(0.0f, 0.0f, 2.0f);
+		  //glScalef(-10.0f, -10.0f, -10.0f);
+		  glmDraw(escena, GLM_SMOOTH | GLM_MATERIAL);
+		  glPopMatrix();
+		
+
 		  glPushMatrix();
 		  glTranslatef(-1.5f, 0.0f, 0.0f);
 		  glmDraw(bunny, GLM_SMOOTH | GLM_MATERIAL);
@@ -95,6 +136,16 @@ public:
 		  glTranslatef(-3.5f, 0.0f, -2.0f);
 		  glmDraw(robot, GLM_SMOOTH | GLM_MATERIAL);
 		  glPopMatrix();
+
+		  glPushMatrix();
+		  glTranslatef(3.5f, 0.0f, 0.0f);
+		  glmDraw(soldier, GLM_SMOOTH | GLM_MATERIAL);
+		  glPopMatrix();
+
+		  glPushMatrix();
+		  glTranslatef(3.5f, 0.0f, -2.0f);
+		  glmDraw(soldier, GLM_SMOOTH | GLM_MATERIAL);
+		  glPopMatrix();
 	      //glutSolidTeapot(1.0);
       if (shader) shader->end();
 
@@ -103,22 +154,29 @@ public:
 
 		  glPushMatrix();
 		  glTranslatef(1.5f, 0.0f, 0.0f);
-		  glBindTexture(GL_TEXTURE_2D, texid);
+		  glBindTexture(GL_TEXTURE_2D, texid[0]);
 		  glmDraw(bandit, GLM_SMOOTH | GLM_MATERIAL | GLM_TEXTURE);
 		  glPopMatrix();
 
 		  glPushMatrix();
 		  glTranslatef(2.5f, 0.0f, 0.0f);
-		  glBindTexture(GL_TEXTURE_2D, texid);
+		  glBindTexture(GL_TEXTURE_2D, texid[0]);
 		  glmDraw(bandit, GLM_SMOOTH | GLM_MATERIAL | GLM_TEXTURE);
 		  glPopMatrix();
 
 		  glPushMatrix();
 		  glTranslatef(0.5f, 0.0f, 0.0f);
-		  glBindTexture(GL_TEXTURE_2D, texid);
+		  glBindTexture(GL_TEXTURE_2D, texid[0]);
 		  glmDraw(bandit, GLM_SMOOTH | GLM_MATERIAL | GLM_TEXTURE);
 		  glPopMatrix();
 
+		  /*
+		  glPushMatrix();
+		  glTranslatef(3.5f, 0.0f, 0.0f);
+		  glBindTexture(GL_TEXTURE_2D, texid[1]);
+		  glmDraw(soldier, GLM_SMOOTH | GLM_MATERIAL | GLM_TEXTURE);
+		  glPopMatrix();
+		  */
 
 	  //glutSolidTeapot(1.0);
 	  if (shader1) shader1->end();
@@ -164,6 +222,34 @@ public:
       bUp = true;
 
 	  //Abrir mallas
+	  palma = NULL;
+
+	  if (!palma)
+	  {
+		  palma = glmReadOBJ("./Mallas/palma.obj");
+		  if (!palma)
+			  exit(0);
+
+		  glmUnitize(palma);
+		  glmFacetNormals(palma);
+		  glmVertexNormals(palma, 90.0);
+	  }
+
+	  
+	  escena = NULL;
+
+	  if (!escena)
+	  {
+		  escena = glmReadOBJ("./Mallas/escena.obj");
+		  if (!escena)
+			  exit(0);
+
+		  glmUnitize(escena);
+		  glmFacetNormals(escena);
+		  glmVertexNormals(escena, 90.0);
+	  }
+	  
+
 	  bunny = NULL;
 
 	  if (!bunny)
@@ -219,7 +305,7 @@ public:
 	  }
  
 	  //*** Para Textura: abrir archivo de textura
-	  initialize_textures();
+	  initialize_bandit_textures();
       DemoLight();
 
 	}
@@ -244,14 +330,16 @@ public:
 	virtual void OnClose(void){}
 	virtual void OnMouseDown(int button, int x, int y) {}    
 	virtual void OnMouseUp(int button, int x, int y) {}
-	virtual void OnMouseWheel(int nWheelNumber, int nDirection, int x, int y){}
+	virtual void OnMouseWheel(int nWheelNumber, int nDirection, int x, int y){
+
+	}
 
 	virtual void OnKeyDown(int nKey, char cAscii)
 	{       
 		if (cAscii == 27) // 0x1b = ESC
 		{
 			this->Close(); // Close Window!
-		} 
+		}
 	};
 
 	virtual void OnKeyUp(int nKey, char cAscii)

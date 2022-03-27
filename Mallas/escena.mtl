@@ -1,0 +1,1001 @@
+# Blender MTL File: 'escena5.blend'
+# Material Count: 94
+
+newmtl BrakeCaliper
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.443406 0.443406 0.443406
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\BrakeCaliper_color.jpg
+
+newmtl Brake_Disc
+Ns 692.646691
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\Brake_Disc_color.jpg
+map_Ns C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\Brake_Disc_roughness.jpg
+refl C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\Brake_Disc_metallic.jpg
+
+newmtl Curb
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Curb.002
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Door
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl FootPath
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl FootPath.002
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Glass
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl GlassFence
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl HouseTexture
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Interior
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\Interior_Bake1_pbr_diffuse.jpg
+map_Ns C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\Interior_Bake1_pbr_roughness.jpg
+refl C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\Interior_Bake1_pbr_metalness.jpg
+
+newmtl InteriorPlastic
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.011373 0.011373 0.011373
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\Interior1_Base_Color.jpg
+map_Ns C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\Interior1_Roughness.jpg
+
+newmtl InteriorPlastic2
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\Interior2_Base_Color.jpg
+map_Ns C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\Interior2_Roughness.jpg
+
+newmtl LampCovers.001
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl LampCovers.002
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.024619 0.024619 0.024619
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl LicensePlate
+Ns 595.803717
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl MainTex
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\Textures\\MainTex.png
+
+newmtl Material.198
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.199
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.200
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.201
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.202
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.203
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.205
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\texture\\lowbayrak_DefaultMaterial_Normal.png
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\texture\\lowbayrak_DefaultMaterial_BaseColor.png
+map_Ns C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\texture\\lowbayrak_DefaultMaterial_Roughness.png
+refl C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\texture\\lowbayrak_DefaultMaterial_Metallic.png
+
+newmtl Material.206
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\texture\\lowbayrak_DefaultMaterial_Normal.png
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\texture\\lowbayrak_DefaultMaterial_BaseColor.png
+map_Ns C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\texture\\lowbayrak_DefaultMaterial_Roughness.png
+refl C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\texture\\lowbayrak_DefaultMaterial_Metallic.png
+
+newmtl Material.207
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\texture\\lowbayrak_DefaultMaterial_Normal.png
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\texture\\lowbayrak_DefaultMaterial_BaseColor.png
+map_Ns C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\texture\\lowbayrak_DefaultMaterial_Roughness.png
+refl C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\texture\\lowbayrak_DefaultMaterial_Metallic.png
+
+newmtl Material.208
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\texture\\lowbayrak_DefaultMaterial_Normal.png
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\texture\\lowbayrak_DefaultMaterial_BaseColor.png
+map_Ns C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\texture\\lowbayrak_DefaultMaterial_Roughness.png
+refl C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\texture\\lowbayrak_DefaultMaterial_Metallic.png
+
+newmtl Material.209
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.210
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.214
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.217
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.219
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.221
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.223
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.225
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.car9.001
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 2.000000 2.000000 2.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\Low Poly Cars (Free)_blender\\Textures\\Car Texture 2.png
+
+newmtl Material_#6
+Ns 18.000005
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\Template.png
+
+newmtl Material__14.001
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\maps_2\\gleditsia triacanthos flowers color.jpg
+map_d C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\maps_2\\gleditsia triacanthos flowers mask.jpg
+
+newmtl Material__5.001
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\maps_2\\gleditsia triacanthos bark reflect.jpg
+
+newmtl Material__6.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\maps_2\\gleditsia triacanthos bark2 a1.jpg
+
+newmtl Material__8.001
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\maps_2\\gleditsia triacanthos leaf color b1.jpg
+map_d C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\maps_2\\gleditsia triacanthos leaf mask.jpg
+
+newmtl Mirror
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Primary
+Ns 374.950945
+Ka 0.559091 0.559091 0.559091
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 3
+
+newmtl Props
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\Textures\\Props.png
+
+newmtl Reflector
+Ns 494.051664
+Ka 1.000000 1.000000 1.000000
+Kd 0.447988 0.447988 0.447988
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl RimMaterial
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\WatanabeRim_normal.jpg
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\WatanabeRim_color.jpg
+refl C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\WatanabeRim_metallic.jpg
+
+newmtl RoadStraight
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl RoadStraight.002
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Roof
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl SVGMat
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.001
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.002
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.003
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.072272 0.072272 0.072272
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.004
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.005
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.006
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.017642 0.017642 0.017642
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.007
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.008
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.072272 0.072272 0.072272
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.009
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.017642 0.017642 0.017642
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.010
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.011
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.072272 0.072272 0.072272
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.012
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.017642 0.017642 0.017642
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.013
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.014
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.015
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.016
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.035
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.017642 0.017642 0.017642
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.036
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.072272 0.072272 0.072272
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.037
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.041
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.017642 0.017642 0.017642
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.042
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.072272 0.072272 0.072272
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.043
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.047
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.017642 0.017642 0.017642
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.048
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.072272 0.072272 0.072272
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl SVGMat.049
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Seatbelt
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\Seatbelt_normal.jpg
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\Seatbelt_color.jpg
+map_Ns C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\Seatbelt_roughness.jpg
+refl C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\Seatbelt_metallic.jpg
+
+newmtl Secondary
+Ns 374.950945
+Ka 0.559091 0.559091 0.559091
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Shadow
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.002063 0.002063 0.002063
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl SteeringWheel
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\SteeringWheel_color.jpg
+map_Ns C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\SteeringWheel_roughness.jpg
+refl C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\SteeringWheel_metallic.jpg
+
+newmtl TailightFrame
+Ns 0.000000
+Ka 0.722727 0.722727 0.722727
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl TireMaterial
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\Tire_color.jpg
+
+newmtl Trim1
+Ns 137.767447
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Trim2
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\Trim2_Color.png
+map_Ns C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\Trim2_roughness.png
+refl C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\toyoa\\textures\\Trim2_metalness.png
+
+newmtl Trueno
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Wall
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Window
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Windows
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.748401 0.650238 0.286848
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\Textures\\window.png
+
+newmtl Windows.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Windows.002
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl blinn2SG
+Ns 0.060000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\Stairs\\obj\\cncr26L.jpg
+
+newmtl blinn3SG
+Ns 0.060000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl leaf.004
+Ns 31.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.529412 0.431373 0.031373
+Ks 0.350000 0.350000 0.350000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\maps\\matteuccia_struthiopteris_leaf_1_04_normal.jpg
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\maps\\matteuccia_struthiopteris_leaf_1_01_diffuse.jpg
+map_d C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\maps\\matteuccia_struthiopteris_leaf_1_05_opacity.jpg
+
+newmtl leaf.008
+Ns 31.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.529412 0.431373 0.031373
+Ks 0.350000 0.350000 0.350000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\maps\\matteuccia_struthiopteris_leaf_1_04_normal.jpg
+map_Kd C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\maps\\matteuccia_struthiopteris_leaf_1_01_diffuse.jpg
+map_d C:\\Users\\Fabian\\Downloads\\completo\\ComputacionGrafica-master\\Blender\\maps\\matteuccia_struthiopteris_leaf_1_05_opacity.jpg
+
+newmtl windows__2
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2

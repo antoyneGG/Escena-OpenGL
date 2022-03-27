@@ -337,3 +337,7 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+# Blenders
+Mallas/piramides.obj
+Mallas/escena.obj
