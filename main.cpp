@@ -32,9 +32,10 @@ protected:
    GLMmodel* bandit; //*** Para Textura: variable para objeto texturizado
    GLMmodel* soldier;
    GLMmodel* palma;
-   GLuint texid[2]; //*** Para Textura: variable que almacena el identificador de textura
+   GLMmodel* piramides;
+   GLuint texid[2]; //*** Para Textura: variable que almacena el identificador de textura, se utiliza un array debido a que hay dos objetos que utilizan distintas texturas (soldado y bandido)
    float yRotate = 0.0f;
-   bool keyE = false, xLeft = false, xRight = false, zForward = false, zBackwards = false, sprint = false;
+   bool keyQ = false, keyE = false, xLeft = false, xRight = false, zForward = false, zBackwards = false, sprint = false;
    float xAccel = 0.0f, zAccel = 0.0f, xPos = 0.0f, zPos = 0.0f, accelRange;
 
 
@@ -190,83 +191,87 @@ public:
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	
       //timer010 = 0.09; //for screenshot!
+		//Tecla E para rotar la camara hacia la derecha
+		//Tecla Q para rotar la camara hacia la izquierda
 
 		if (keyE) {
 			yRotate = yRotate + 1;
 		}
+		if (keyQ) {
+			yRotate = yRotate - 1;
+		}
 		
       glPushMatrix();
 	  glTranslatef(0.0f, 0.0f, -20.0f); // Z Original: -20.0f
-	  glRotatef(yRotate, 0.0, 1.0f, 0.0f);
+	  glRotatef(yRotate, 0.0, 1.0f, 0.0f); //Rotacion de la camara
 
       if (shader) shader->begin();
-		  /*
+		  
+	  
 		  glPushMatrix();
 		  glTranslatef(0.0f, 4.0f, 2.0f);
 		  glScalef(15.0f, 15.0f, 15.0f);
 		  glmDraw(escena, GLM_SMOOTH | GLM_MATERIAL);
 		  glPopMatrix();
-			*/
-		  /*
-		  glPushMatrix();
-		  glTranslatef(-1.5f, 0.0f, 0.0f);
-		  glmDraw(bunny, GLM_SMOOTH | GLM_MATERIAL);
-		  glPopMatrix();
-		  */
+		  
 
 		  glPushMatrix();
-		  glTranslatef(-3.5f, 0.0f, 0.0f);
+		  glTranslatef(0.0f, 1.0f, 0.0f);
+		  glScalef(30.0f, 30.0f, 30.0f);
+		  glmDraw(piramides, GLM_SMOOTH | GLM_MATERIAL);
+		  glPopMatrix();
+	
+
+		  glPushMatrix();
+		  glTranslatef(2.5f, 0.0f, -4.0f);
 		  glmDraw(robot, GLM_SMOOTH | GLM_MATERIAL);
 		  glPopMatrix();
 
 		  glPushMatrix();
-		  glTranslatef(-3.5f, 0.0f, -2.0f);
+		  glTranslatef(4.5f, 0.0f, -7.0f);
 		  glmDraw(robot, GLM_SMOOTH | GLM_MATERIAL);
 		  glPopMatrix();
 
 		  glPushMatrix();
-		  glTranslatef(-1.5f, 0.0f, -7.0f);
+		  glTranslatef(-0.4f, 0.0f, -7.4f);
+		  glRotatef(-90, 0.0f, 1.0f, 0.0f);
 		  glmDraw(soldier, GLM_SMOOTH | GLM_MATERIAL);
 		  glPopMatrix();
 
 		  glPushMatrix();
-		  glTranslatef(1.5f, 0.0f, -7.0f);
+		  glTranslatef(0.4f, 0.0f, -7.4f);
+		  glRotatef(90, 0.0f, 1.0f, 0.0f);
 		  glmDraw(soldier, GLM_SMOOTH | GLM_MATERIAL);
 		  glPopMatrix();
-	      //glutSolidTeapot(1.0);
+
       if (shader) shader->end();
 
 	  //*** Para Textura: llamado al shader para objetos texturizados
 	  if (shader1) shader1->begin();
 
+		//Bandido interactivo con funcion moveBandit(), WASD utilizado para su movimiento y ESPACIO para sprint
 		  glPushMatrix();
-		  glTranslatef(1.5f, 0.0f, 0.0f);
+		  glTranslatef(1.9f, 0.0f, 1.2f);
 		  glBindTexture(GL_TEXTURE_2D, texid[0]);
 		  moveBandit();
 		  glmDraw(bandit, GLM_SMOOTH | GLM_MATERIAL | GLM_TEXTURE);
 		  glPopMatrix();
 
 		  glPushMatrix();
-		  glTranslatef(2.5f, 0.0f, 0.0f);
+		  glTranslatef(2.5f, 0.0f, 1.9f);
+		  glRotatef(-135, 0.0f, 1.0f, 0.0f);
 		  glBindTexture(GL_TEXTURE_2D, texid[0]);
 		  glmDraw(bandit, GLM_SMOOTH | GLM_MATERIAL | GLM_TEXTURE);
 		  glPopMatrix();
 
 		  glPushMatrix();
-		  glTranslatef(0.5f, 0.0f, 0.0f);
+		  glTranslatef(1.0f, 0.0f, 1.9f);
+		  glRotatef(135, 0.0f, 1.0f, 0.0f);
 		  glBindTexture(GL_TEXTURE_2D, texid[0]);
 		  glmDraw(bandit, GLM_SMOOTH | GLM_MATERIAL | GLM_TEXTURE);
 		  glPopMatrix();
 
-		  /*
-		  glPushMatrix();
-		  glTranslatef(3.5f, 0.0f, 0.0f);
-		  glBindTexture(GL_TEXTURE_2D, texid[1]);
-		  glmDraw(soldier, GLM_SMOOTH | GLM_MATERIAL | GLM_TEXTURE);
-		  glPopMatrix();
-		  */
-
-	  //glutSolidTeapot(1.0);
+		  
 	  if (shader1) shader1->end();
 
 
@@ -310,20 +315,7 @@ public:
       bUp = true;
 
 	  //Abrir mallas
-	  palma = NULL;
-
-	  if (!palma)
-	  {
-		  palma = glmReadOBJ("./Mallas/palma.obj");
-		  if (!palma)
-			  exit(0);
-
-		  glmUnitize(palma);
-		  glmFacetNormals(palma);
-		  glmVertexNormals(palma, 90.0);
-	  }
-
-	  /*
+	  //Escena estatica del mundo virtual (incluye edificios, carreteras, arboles, semaforos, lamparas y automoviles)
 	  escena = NULL;
 
 	  if (!escena)
@@ -336,21 +328,8 @@ public:
 		  glmFacetNormals(escena);
 		  glmVertexNormals(escena, 90.0);
 	  }
-	  */
-
-	  bunny = NULL;
-
-	  if (!bunny)
-	  {
-		  bunny = glmReadOBJ("./Mallas/bunny.obj");
-		  if (!bunny)
-			  exit(0);
-
-		  glmUnitize(bunny);
-		  glmFacetNormals(bunny);
-		  glmVertexNormals(bunny, 90.0);
-	  }
-
+	 
+	  //Robot realizado por nosotros en blender
 	  robot = NULL;
 
 	  if (!robot)
@@ -365,7 +344,7 @@ public:
 	  }
 
 
-	  //*** Para Textura: abrir malla de objeto a texturizar
+	  //Bandidos rebeldes del mundo (uno de ellos es interactivo)
 	  bandit = NULL;
 
 	  if (!bandit)
@@ -379,6 +358,7 @@ public:
 		  glmVertexNormals(bandit, 90.0);
 	  }
 
+	  //Soldados del gran hermano (estaticos)
 	  soldier = NULL;
 
 	  if (!soldier)
@@ -390,6 +370,20 @@ public:
 		  glmUnitize(soldier);
 		  glmFacetNormals(soldier);
 		  glmVertexNormals(soldier, 90.0);
+	  }
+
+	  //Piramides y sus robots guardianes
+	  piramides = NULL;
+
+	  if (!piramides)
+	  {
+		  piramides = glmReadOBJ("./Mallas/piramides.obj");
+		  if (!piramides)
+			  exit(0);
+
+		  glmUnitize(piramides);
+		  glmFacetNormals(piramides);
+		  glmVertexNormals(piramides, 90.0);
 	  }
  
 	  //*** Para Textura: abrir archivo de textura
@@ -432,6 +426,9 @@ public:
 		case 'e':
 			keyE = true;
 			break;
+		case 'q':
+			keyQ = true;
+			break;
 		case 'a':
 			xLeft = true;
 			break;
@@ -456,6 +453,9 @@ public:
 		{
 		case 'e':
 			keyE = false;
+			break;
+		case 'q':
+			keyQ = false;
 			break;
 		case 'a':
 			xLeft = false;
