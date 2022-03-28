@@ -1,0 +1,5 @@
+Analizando los datos de uso de memoria que arroja
+Visual Studio pudimos notar que la solucion requiere al menos
+800MB de memoria RAM para poder almacenar y desplegar las mallas,
+esto genera una notable lentitud en la renderizacion en OpenGL y
+por lo tanto un ratio de frames bastante bajo.
