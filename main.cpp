@@ -11,6 +11,7 @@
 #include <time.h>
 #include "glm.h"
 #include <FreeImage.h> //*** Para Textura: Incluir librería
+#include <math.h>
 
 //-----------------------------------------------------------------------------
 
@@ -33,7 +34,8 @@ protected:
    GLMmodel* palma;
    GLuint texid[2]; //*** Para Textura: variable que almacena el identificador de textura
    float yRotate = 0.0f;
-   bool keyE = false;
+   bool keyE = false, xLeft = false, xRight = false, zForward = false, zBackwards = false, sprint = false;
+   float xAccel = 0.0f, zAccel = 0.0f, xPos = 0.0f, zPos = 0.0f, accelRange;
 
 
 public:
@@ -70,6 +72,84 @@ public:
 		FreeImage_Unload(pImage);
 		//
 		glEnable(GL_TEXTURE_2D);
+	}
+
+	void moveBandit()
+	{
+		// Maxima velocidad (aumenta si se corre con espacio presionado)
+		accelRange = 2.0f + 3.0f * sprint;
+		// Ajustar aceleracion en el eje X
+		if (xLeft)
+		{
+			xAccel -= 0.1f;
+		}
+		else if (xRight)
+		{
+			xAccel += 0.1f;
+		}
+		else
+		{
+			if (xAccel > 0)
+			{
+				xAccel -= 0.05f;
+			}
+			else if (xAccel < 0)
+			{
+				xAccel += 0.05f;
+			}
+		}
+		// Ajustar aceleracion en el eje Z
+		if (zForward)
+		{
+			zAccel -= 0.1f;
+		}
+		else if (zBackwards)
+		{
+			zAccel += 0.1f;
+		}
+		else
+		{
+			if (zAccel > 0)
+			{
+				zAccel -= 0.05f;
+			}
+			else if (zAccel < 0)
+			{
+				zAccel += 0.05f;
+			}
+		}
+		// Asegurar que la aceleracion no supere el limite
+		if (xAccel > accelRange)
+		{
+			xAccel = accelRange;
+		}
+		else if (xAccel < -accelRange)
+		{
+			xAccel = -accelRange;
+		}
+		if (zAccel > accelRange)
+		{
+			zAccel = accelRange;
+		}
+		else if (zAccel < -accelRange)
+		{
+			zAccel = -accelRange;
+		}
+		// Check para corregir error punto flotante
+		if (xAccel > -0.00001 && xAccel < 0.00001)
+		{
+			xAccel = 0;
+		}
+		if (zAccel > -0.00001 && zAccel < 0.00001)
+		{
+			zAccel = 0;
+		}
+		// Movimiento
+		xPos += 0.01f * xAccel;
+		zPos += 0.01f * zAccel;
+		std::cout << xAccel << "\n";
+		std::cout << sprint << "\n";
+		glTranslatef(xPos, 0.0f, zPos);
 	}
 
 	void initialize_soldier_textures(void)
@@ -116,17 +196,17 @@ public:
 		}
 		
       glPushMatrix();
-	  glTranslatef(0.0f, 0.0f, -20.0f);
+	  glTranslatef(0.0f, 0.0f, -20.0f); // Z Original: -20.0f
 	  glRotatef(yRotate, 0.0, 1.0f, 0.0f);
 
       if (shader) shader->begin();
-		  
+		  /*
 		  glPushMatrix();
 		  glTranslatef(0.0f, 4.0f, 2.0f);
 		  glScalef(15.0f, 15.0f, 15.0f);
 		  glmDraw(escena, GLM_SMOOTH | GLM_MATERIAL);
 		  glPopMatrix();
-		
+			*/
 		  /*
 		  glPushMatrix();
 		  glTranslatef(-1.5f, 0.0f, 0.0f);
@@ -162,6 +242,7 @@ public:
 		  glPushMatrix();
 		  glTranslatef(1.5f, 0.0f, 0.0f);
 		  glBindTexture(GL_TEXTURE_2D, texid[0]);
+		  moveBandit();
 		  glmDraw(bandit, GLM_SMOOTH | GLM_MATERIAL | GLM_TEXTURE);
 		  glPopMatrix();
 
@@ -242,7 +323,7 @@ public:
 		  glmVertexNormals(palma, 90.0);
 	  }
 
-	  
+	  /*
 	  escena = NULL;
 
 	  if (!escena)
@@ -255,7 +336,7 @@ public:
 		  glmFacetNormals(escena);
 		  glmVertexNormals(escena, 90.0);
 	  }
-	  
+	  */
 
 	  bunny = NULL;
 
@@ -343,23 +424,62 @@ public:
 
 	virtual void OnKeyDown(int nKey, char cAscii)
 	{       
-		if (cAscii == 27) // 0x1b = ESC
+		switch(cAscii)
 		{
+		case 27: // 0x1b = ESC
 			this->Close(); // Close Window!
-		}
-		else if (cAscii == 'e') {
+			break;
+		case 'e':
 			keyE = true;
+			break;
+		case 'a':
+			xLeft = true;
+			break;
+		case 'd':
+			xRight = true;
+			break;
+		case 'w':
+			zForward = true;
+			break;
+		case 's':
+			zBackwards = true;
+			break;
+		case ' ':
+			sprint = true;
+			break;
 		}
 	};
 
 	virtual void OnKeyUp(int nKey, char cAscii)
 	{
-		if (cAscii == 's')      // s: Shader
-			shader->enable();
-		else if (cAscii == 'f') // f: Fixed Function
-			shader->disable();
-		else if (cAscii == 'e')
+		switch (cAscii)
+		{
+		case 'e':
 			keyE = false;
+			break;
+		case 'a':
+			xLeft = false;
+			break;
+		case 'd':
+			xRight = false;
+			break;
+		case 'w':
+			zForward = false;
+			break;
+		case 's':
+			zBackwards = false;
+			break;
+		case ' ':
+			sprint = false;
+			break;
+		case 'n':
+			shader->enable(); // shader
+			break;
+		case 'm':
+			shader->disable(); // fixed function
+			break;
+		}
+		
 	}
 
    void UpdateTimer()
